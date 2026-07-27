@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EDUCORE client product list - images and specifications without pricing." />
+    <title>EDUCORE Product List 2026</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="EDUCORE Product List home">
+        <img src="/images/branding/educore-logo.jpeg" alt="EDUCORE logo" />
+        <span><strong>EDUCORE</strong><small>Product List 2026</small></span>
+      </a>
+      <div class="header-actions">
+        <button id="downloadPdf" class="button primary">Download PDF</button>
+        <button id="printPdf" class="button secondary">Print PDF</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">CLIENT PRODUCT LIST</span>
+          <h1>Everything your organisation needs, in one professional list.</h1>
+          <p>Stationery, office furniture, PPE, cleaning and hygiene supplies, and hospital equipment. Contact EDUCORE for a tailored quotation.</p>
+          <div class="contact-row">
+            <a href="tel:+27719450220">071 945 0220</a>
+            <a href="mailto:info@educorestationery-hygiene-ppe.co.za">info@educorestationery-hygiene-ppe.co.za</a>
+            <a href="https://www.educorestationery-hygiene-ppe.co.za">Visit website</a>
+          </div>
+        </div>
+        <div class="hero-stat"><strong id="productCount">0</strong><span>products available</span></div>
+      </section>
+
+      <section class="controls" aria-label="Product controls">
+        <label class="search">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Product name, SKU, description…" />
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="categoryFilter"><option value="all">All categories</option></select>
+        </label>
+      </section>
+
+      <p id="status" class="status" role="status">Loading the live product list…</p>
+      <section id="productGrid" class="product-grid" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <strong>EDUCORE</strong>
+      <span>104 Donnelly Street, Turffontein, Johannesburg, 2190</span>
+      <span>Supplier Number: MAAA1735098</span>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

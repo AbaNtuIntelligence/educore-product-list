@@ -1,0 +1,17 @@
+{
+  "name": "educore-product-list",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.3",
+    "pdfmake": "^0.2.20",
+    "qrcode": "^1.5.4",
+    "vite": "^8.1.5"
+  }
+}
