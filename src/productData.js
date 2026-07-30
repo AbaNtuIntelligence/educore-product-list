@@ -17,7 +17,16 @@ const categoryMap = {
   hospital: "hospital",
   "hospital equipment": "hospital",
   "medical equipment": "hospital",
-  healthcare: "hospital"
+  healthcare: "hospital",
+  fire: "fire",
+  "fire & emergency safety": "fire",
+  signs: "signage",
+  signage: "signage",
+  "safety signage": "signage",
+  maps: "educational",
+  educational: "educational",
+  "educational resources": "educational",
+  "office accessories": "office-accessories"
 };
 
 export const categoryLabels = {
@@ -25,7 +34,11 @@ export const categoryLabels = {
   furniture: "Office Furniture",
   ppe: "PPE & Safety",
   cleaning: "Cleaning & Hygiene",
-  hospital: "Hospital Equipment"
+  hospital: "Hospital Equipment",
+  fire: "Fire & Emergency Safety",
+  signage: "Safety Signage",
+  educational: "Educational Resources",
+  "office-accessories": "Office Accessories"
 };
 
 function clean(value) {
@@ -50,6 +63,7 @@ export async function loadProducts() {
     .map((row, index) => {
       const filename = clean(row["Image Filename"]);
       const cloudUrl = clean(row["Cloud URL"]);
+      const largeImageUrl = clean(row["Large Image URL"]);
       return {
         id: clean(row.ID) || String(index + 1),
         name: clean(row["Product Name"]),
@@ -58,6 +72,8 @@ export async function loadProducts() {
         unit: clean(row.Unit),
         description: clean(row.Description),
         image: cloudUrl || (filename ? `/images/products/${filename}` : "/images/placeholder.webp"),
+        thumbnailImage: cloudUrl || (filename ? `/images/products/${filename}` : "/images/placeholder.webp"),
+        largeImage: largeImageUrl,
         localImage: filename ? `/images/products/${filename}` : "/images/placeholder.webp",
         features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
           .map((key) => clean(row[key]))

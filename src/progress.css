@@ -1,0 +1,25 @@
+.generation-progress {
+  display: grid;
+  grid-template-columns: minmax(160px, 420px) 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: -8px 2px 22px;
+  color: #536275;
+  font-size: 13px;
+}
+
+.generation-progress[hidden] {
+  display: none;
+}
+
+.generation-progress progress {
+  width: 100%;
+  height: 14px;
+  accent-color: #f05a28;
+}
+
+@media (max-width: 620px) {
+  .generation-progress {
+    grid-template-columns: 1fr;
+  }
+}
